@@ -1,4 +1,4 @@
-function Button({ children, color, size, loading, sx, ...props }) {
+function Button({ children, color, size, loading, classes, ...props }) {
   let buttonColor;
   if (color === "primary") {
     buttonColor = "bg-blue-600 hover:bg-blue-700 dark:focus:ring-blue-600";
@@ -15,17 +15,17 @@ function Button({ children, color, size, loading, sx, ...props }) {
 
   let buttonSize;
   if (size === "small") {
-    buttonSize = "text-sm";
+    buttonSize = "py-1 px-3";
   } else if (size === "large") {
-    buttonSize = "text-lg";
+    buttonSize = "py-3 px-5";
   } else {
-    buttonSize = "text-base";
+    buttonSize = "py-2 px-4";
   }
 
   return (
     <button
       {...props}
-      className={`flex justify-center items-center py-2 px-4 ${buttonSize} font-semibold rounded-lg border border-transparent text-white ${buttonColor} disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 ${sx}`}
+      className={`flex justify-center items-center text-base ${buttonSize} font-semibold rounded-lg border border-transparent text-white ${buttonColor} disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 ${classes}`}
     >
       {children}
       {loading && (
