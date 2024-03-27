@@ -2,9 +2,9 @@ import { HiBars3 } from "react-icons/hi2";
 
 function Header() {
   return (
-    <div className="bg-white border-b border-gray-200 sticky left-0 right-0 w-full z-50">
+    <div className="ml-0 md:ml-[15rem] bg-white border-b border-gray-200 sticky top-0 z-40">
       <div className="flex items-center justify-between p-3">
-        <div className="flex-shrink-0">
+        <div className="flex items-center flex-shrink-0">
           <div>
             <button className="flex items-center">
               <span>
@@ -15,7 +15,7 @@ function Header() {
           <div>Search Input box</div>
           <div>Add New</div>
         </div>
-        <div className="ms-auto">
+        <div className="flex items-center ms-auto">
           <div>Notification</div>
           <div>Massage</div>
           <div>User Profile</div>
